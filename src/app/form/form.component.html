@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>{{model.id ? "Edit Movie" : "New Movie"}}</h2>
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" placeholder="Inserisci il titolo" [(ngModel)]="model.title">
+      </div>
+      <div class="mb-3">
+        <label for="director" class="form-label">Director</label>
+        <input type="text" class="form-control" id="director" placeholder="Inserisci il regista" [(ngModel)]="model.director">
+      </div>
+      <div class="mb-3">
+        <label for="releaseDate" class="form-label">ReleaseDate</label>
+        <input type="text" class="form-control" id="releaseDate" placeholder="Inserisci la data" [(ngModel)]="model.releaseDate">
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="save()">{{model.id ? "Edit" : "Save"}}</button>
+  </div>
+  
